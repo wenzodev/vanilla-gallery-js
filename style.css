@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+}
+
+:root {
+    --primary: #084170;
+    --transition: all 250ms ease-in-out;
+    --white-faded: rgba(255, 255, 255, .5);
+    --dark-faded: rgba(100, 100, 100, .4);
+}
+
+body {
+    display: grid;
+    background: #999999;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+}
+
+h1 {
+    padding: 2rem 1.5rem 0;
+    text-align: center;
+    color: var(--primary);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    width: 90%;
+    gap: 1rem;
+    padding: 2.5rem;
+}
+
+.lightbox-enabled {
+    width: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.lightbox-enabled:hover {
+    opacity: .8;
+    cursor: zoom-in;
+    transform: scale(1.01);
+}
+
+.lightbox-container {
+    top: 0;
+    position: fixed;
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: var(--white-faded);
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+    z-index: 1000;
+    /* on top of everything */
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--transition);
+}
+
+.lightbox-container.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.lightbox-image-wrapper {
+    display: grid;
+    place-items: center;
+    max-width: 90vw;
+    max-height: 90vh;
+    position: relative;
+    box-shadow: 3px 3px 18px var(--dark-faded);
+}
+
+.lightbox-btn {
+    background-color: var(--white-faded);
+    display: grid;
+    place-items: center;
+    padding: .8rem;
+    color: var(--primary);
+    cursor: pointer;
+    transition: var(--transition);
+    position: absolute;
+}
+
+.lightbox-btn.inactive {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.lightbox-btn:focus {
+    outline: none;
+}
+
+.left {
+    left: 5px;
+}
+
+.left:hover,
+.left:focus {
+    left: 0;
+}
+
+.right {
+    right: 5px;
+}
+
+.right:hover,
+.right:focus {
+    right: 0;
+}
+
+.lightbox-img {
+    width: 100%;
+    object-fit: cover;
+    cursor: zoom-out;
+}

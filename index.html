@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanilla-js-gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <h1>Title - for multiple</h1>
+    <div class="grid-container">
+        <img src="./img/sm-img1.jpg" data-imagesrc="./img/img1.jpg" alt="landscapes" class="lightbox-enabled">
+        <img src="./img/sm-img2.jpg" alt="landscapes" data-imagesrc="./img/img2.jpg" class="lightbox-enabled">
+        <img src="./img/sm-img3.jpg" alt="landscapes" data-imagesrc="./img/img3.jpg" class="lightbox-enabled">
+        <img src="./img/sm-img4.jpg" alt="landscapes" data-imagesrc="./img/img4.jpg" class="lightbox-enabled">
+        <img src="./img/sm-img6.jpg" alt="landscapes" data-imagesrc="./img/img6.jpg" class="lightbox-enabled">
+        <img src="./img/sm-img7.jpg" alt="landscapes" data-imagesrc="./img/img7.jpg" class="lightbox-enabled">
+    </div>
+    <div class="lightbox-container">
+        <div class="lightbox-image-wrapper">
+            <button class="lightbox-btn left" id="left">
+                <svg viewBox="0 0 24 24" width="35" height="35" fill="none" stroke="#000" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="join" class="feather fetaher-arrow-left-circle">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 8 8 12 12 16"></polyline>
+                    <line x1="16" y1="12" x2="8" y2="12"></line>
+                </svg>
+            </button>
+            <img alt="landscapes" class="lightbox-img">
+            <button class="lightbox-btn right" id="right">
+                <svg viewBox="0 0 24 24" width="35" height="35" fill="none" stroke="#000" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="join" class="feather fetaher-arrow-left-circle">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 16 16 12 12 8"></polyline>
+                    <line x1="8" y1="12" x2="16" y2="12"></line>
+                </svg>
+            </button>
+        </div>
+    </div>
+</body>
+
+</html>
